@@ -13,8 +13,9 @@ class LibraryViewController: UIViewController {
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-    
     let playListViewModel = PlayListViewModel()
+    
+    var selectId: String? = nil
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -70,7 +71,24 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         cell.imageView?.image = playList?.images.count ?? 0 > 0
         ? HelperImage.setImageFromUrl(url: playList?.images[0].url ?? "")
         : UIImage(named: "music-note")
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(named: "BgDark")
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectId = playListViewModel.playList?.items[indexPath.section].id
+        performSegue(withIdentifier: "detail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail" {
+            let playlistDetail = segue.destination as! PlaylistDetailViewController
+            playlistDetail.id = selectId
+        }
     }
     
 }
