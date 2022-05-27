@@ -11,18 +11,18 @@ struct PlaylistDetail: Codable {
     let name: String
     let description: String
     let followers: Followers
-    let tracks: TrackDetail
+    let tracks: Tracks
     
 }
-struct Followers: Codable{
+struct Followers: Codable {
     let total: Int
 }
 
-struct TrackDetail: Codable{
-    let items: [ItemDetail]
+struct Tracks: Codable {
+    let items: [ItemsDetail]
 }
 
-struct ItemDetail: Codable{
+struct ItemsDetail: Codable {
     let track: Track
 }
 
@@ -31,7 +31,7 @@ struct Track: Codable{
 }
 struct Album: Codable{
     let name: String
-    let artist: [Artists]
+    let artists: [Artists]
     let images: [ImageDetail]
 }
 
@@ -41,6 +41,6 @@ struct Artists: Codable {
 
 struct ImageDetail: Codable{
     let height: Int?
-    let url: String?
+    let url: String
     let width: Int?
 }

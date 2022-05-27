@@ -8,7 +8,7 @@
 import Foundation
 class Request {
     
-    let token = "BQAd2rKFV8f9Mf4R4ZYQromR8whJhTeYop8ocpYp_wrs9_YaQF3LrwCXvlwLMrHbFglVKJBQfuRzSMq1jGOUi-AmvlEqzFf0pyUN0Wk6hhnVtfMCd37yp892aTUSyn_ns1ImdJcnD1PClEwLrKonQhdXZ_MxdjsXKsjjkSdqTM8Q2UmBxw"
+    let token = "BQDBzS-JSVPnYbOZDxTplCJHUovUZHCx0xgmS1rsO5LoTCCaUhXLCxG-wP6Prw88GiPjYVzCJVYbZKI1cQOOgj7i7s-GfoCdtJ2sXNXb5kVo8lsF2vTiPcWZYuctUebjcV-vPi-KnfkEwp1bCmoExV1bAqGm-3gH59CRzXRtYMYX_l3VCw"
     let BASE_URL = "https://api.spotify.com/v1/"
     
     // ojo si un type tiene el signo ? es pq puede ser nil

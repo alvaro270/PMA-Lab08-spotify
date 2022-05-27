@@ -62,7 +62,7 @@ extension PlaylistDetailViewController: UITableViewDelegate, UITableViewDataSour
         let playlist = playlistDetailViewModel.playlistDetail?.tracks.items[indexPath.row].track.album
                 
         cell.lblName.text = playlist?.name
-        cell.lblAuthor.text = playlist?.artist[0].name
+//        cell.lblAuthor.text = playlist?.artist[0].name
         cell.coverImage.sd_setImage(with: URL(string: (playlist?.images[0].url)!))
                 
         return cell

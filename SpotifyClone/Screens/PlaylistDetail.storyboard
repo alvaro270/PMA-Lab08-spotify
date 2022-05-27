@@ -159,7 +159,6 @@
                         <outlet property="lblDescription" destination="Dsm-dB-Uxs" id="2ih-vk-X7d"/>
                         <outlet property="lblFollowers" destination="bPM-s1-3N7" id="tXZ-fo-bTX"/>
                         <outlet property="lblTitle" destination="hfh-o2-t9F" id="gkq-aL-dez"/>
-                        <outlet property="lbltitle" destination="hfh-o2-t9F" id="Mor-bb-jnF"/>
                         <outlet property="tableView" destination="HcK-Sv-D6l" id="dp6-74-Zts"/>
                     </connections>
                 </viewController>

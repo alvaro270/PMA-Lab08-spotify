@@ -8,7 +8,9 @@
 import Foundation
 class PlaylistDetailViewModel {
     let request: Request = Request()
+    
     var playlistDetail: PlaylistDetail? = nil
+    
     func getPlaylistDetail(id: String) async {
         let data = await request.getDataFromAPI(url: "users/22qq743gby64ks5dsk7mrkcqa/playlists/\(id)")
         if data != nil {
