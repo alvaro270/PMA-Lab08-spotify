@@ -18,6 +18,10 @@
 		BA9F716628530C3D000DA6B1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BA9F716528530C3D000DA6B1 /* FirebaseFirestore */; };
 		BA9F716828530C3D000DA6B1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BA9F716728530C3D000DA6B1 /* FirebaseStorage */; };
 		BA9F716A28530D28000DA6B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA9F716928530D28000DA6B1 /* GoogleService-Info.plist */; };
+		BA9F717028549EC1000DA6B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F716F28549EC1000DA6B1 /* HomeViewController.swift */; };
+		BA9F71722854A390000DA6B1 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F71712854A390000DA6B1 /* Search.swift */; };
+		BA9F71742854A4E5000DA6B1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F71732854A4E5000DA6B1 /* SearchViewModel.swift */; };
+		BA9F71762854AFB0000DA6B1 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F71752854AFB0000DA6B1 /* SearchTableViewCell.swift */; };
 		BAA29D3E282F6C80004BCC13 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA29D3D282F6C80004BCC13 /* Home.storyboard */; };
 		BAA29D40282F76B7004BCC13 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA29D3F282F76B7004BCC13 /* Request.swift */; };
 		BAA29D42282F77E5004BCC13 /* Spotify+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA29D41282F77E5004BCC13 /* Spotify+String.swift */; };
@@ -45,6 +49,10 @@
 		BA4F309E2825BE080056B5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA4F30A02825BE080056B5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9F716928530D28000DA6B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA9F716F28549EC1000DA6B1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BA9F71712854A390000DA6B1 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		BA9F71732854A4E5000DA6B1 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		BA9F71752854AFB0000DA6B1 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		BAA29D3D282F6C80004BCC13 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BAA29D3F282F76B7004BCC13 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		BAA29D41282F77E5004BCC13 /* Spotify+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spotify+String.swift"; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 				BA4F30962825BE080056B5A9 /* ViewController.swift */,
 				BAA29D47282F7F79004BCC13 /* LibraryViewController.swift */,
 				BAA4C08528385F84006681F9 /* PlaylistDetailViewController.swift */,
+				BA9F716F28549EC1000DA6B1 /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 				BAA29D3F282F76B7004BCC13 /* Request.swift */,
 				BAA29D45282F7AAE004BCC13 /* PlayListViewModel.swift */,
 				BAA4C07F28383ED8006681F9 /* PlaylistDetailViewModel.swift */,
+				BA9F71732854A4E5000DA6B1 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 			children = (
 				BAA29D43282F7A4D004BCC13 /* PlayList.swift */,
 				BAA4C07D283838FD006681F9 /* PlayListDetail.swift */,
+				BA9F71712854A390000DA6B1 /* Search.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				BAA4C08828387E02006681F9 /* ItemPlaylistDetailTableViewCell.swift */,
+				BA9F71752854AFB0000DA6B1 /* SearchTableViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -268,13 +280,17 @@
 				BAA4C0842838493C006681F9 /* GradientView.swift in Sources */,
 				BA4F30972825BE080056B5A9 /* ViewController.swift in Sources */,
 				BAA29D48282F7F79004BCC13 /* LibraryViewController.swift in Sources */,
+				BA9F717028549EC1000DA6B1 /* HomeViewController.swift in Sources */,
 				BAA4C08928387E02006681F9 /* ItemPlaylistDetailTableViewCell.swift in Sources */,
 				BAA29D4A282F80A1004BCC13 /* Spotify+Image.swift in Sources */,
 				BAA29D42282F77E5004BCC13 /* Spotify+String.swift in Sources */,
+				BA9F71762854AFB0000DA6B1 /* SearchTableViewCell.swift in Sources */,
 				BAA29D40282F76B7004BCC13 /* Request.swift in Sources */,
 				BAA4C08628385F84006681F9 /* PlaylistDetailViewController.swift in Sources */,
 				BAA29D44282F7A4D004BCC13 /* PlayList.swift in Sources */,
 				BA4F30932825BE080056B5A9 /* AppDelegate.swift in Sources */,
+				BA9F71722854A390000DA6B1 /* Search.swift in Sources */,
+				BA9F71742854A4E5000DA6B1 /* SearchViewModel.swift in Sources */,
 				BAA4C07E283838FD006681F9 /* PlayListDetail.swift in Sources */,
 				BA4F30952825BE080056B5A9 /* SceneDelegate.swift in Sources */,
 			);

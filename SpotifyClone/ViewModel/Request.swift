@@ -15,6 +15,7 @@ class Request {
     //en este caso estamos diciendo que nuestra funcion retorne un Data o nil
     func getDataFromAPI(url: String) async -> Data? {
             do {
+                let urlParse = url.replacingOccurrences(of: " ", with: "%20")
                 var request = URLRequest(url: HelperString.getURLFromString(url: "\(BASE_URL)\(url)")!)
                 request.httpMethod = "GET"
                 request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
