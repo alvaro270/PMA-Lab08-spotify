@@ -31,13 +31,13 @@ class HomeViewController: UIViewController {
     }
         
     func setUpTable() {
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableview.delegate = self
+        tableview.dataSource = self
     }
         
-    func setUpData() async {
-            await searchViewModel.getSearchMusic(name: "rock")
-            tableView.reloadData()
+    func setUpData() async{
+        await searchViewModel.getSearchMusic(name: "rock")
+        tableview.reloadData()
     }
 }
 
@@ -56,7 +56,7 @@ extension HomeViewController: UISearchBarDelegate {
         self.view.endEditing(true)
         Task {
             await searchViewModel.getSearchMusic(name: textDidChangeSave)
-            tableView.reloadData()
+            tableview.reloadData()
         }
         
     }
